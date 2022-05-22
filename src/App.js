@@ -1,13 +1,25 @@
-import Header from './components/MainHeader';
-import Search from './components/SearchForm';
+import { Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <h1>Cutting Board</h1>
-
+      <main style={styles.container}>
+         <Dashboard />
+      </main>
     </div>
   );
 }
 
 export default App;
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: '0 1rem',
+  
+  },
+
+}
