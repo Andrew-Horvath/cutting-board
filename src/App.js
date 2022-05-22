@@ -1,10 +1,11 @@
-import SearchButton from './components/ButtonStandard';
+import Header from './components/MainHeader';
+import Search from './components/SearchForm';
 
 function App() {
   return (
     <div className="App">
-      <h1>Test H1 react app</h1>
-    <SearchButton btnText='Search' />
+      <h1>Cutting Board</h1>
+
     </div>
   );
 }

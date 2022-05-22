@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Logo from './images/cb_Logo.jpg';
+import Button from './ButtonStandard';
+import { BsSearch } from 'react-icons/bs';
+
 
 const MainHeader = () => {
     return (
@@ -8,7 +12,7 @@ const MainHeader = () => {
                 <div style={styles.logo}>
                     <img src={Logo} alt='some alt text for logo here' />
                 </div>
-                <h1 style={styles.companyTitle}>Mango Digital</h1>
+                <h1 style={styles.companyTitle}>Cutting Board</h1>
             </div>
             <div style={styles.searchWrapper}>
                 <span style={styles.searchIcon}><BsSearch /></span>
@@ -16,9 +20,7 @@ const MainHeader = () => {
                 placeholder="Search" />
             </div>
             <nav style={styles.rightNav}>
-                <NavIcons><GoSettings /></NavIcons>
-                <NavIcons><GiSquirrel /></NavIcons>
-                <Avatar AvatarIcon={AvatarImageURL} />
+               <Button bthText='Button' />
             </nav>
         </header>
     )
