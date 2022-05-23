@@ -20,25 +20,25 @@ export default Dashboard;
 const styles = {
     container: {
         padding: '1rem',
-        background:  `linear-gradient(to bottom, rgba(255,255,255,0), rgba(57,57,57,.65), rgba(143, 45, 86, 1)), url(${ContainerBackground}) `,
+        background:  `linear-gradient(to bottom, rgba(255,255,255, 0), rgba(57,57,57,.65), rgba(143, 45, 86, 1)), url(${ContainerBackground}) center center`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         minHeight: '90vh',
  
-        
     },
     header: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+        marginTop: '50rem',
     },
     title: {
         fontFamily: 'Roboto Slab',
         fontWeight: '600',
         fontSize: '4rem',
         textTransform: 'uppercase',
-        color: 'rgba(255, 188, 66, 1)',
+        color: 'rgba(255, 169, 10, 1)',
         margin: '0 0 1rem 0rem',
     },
 
