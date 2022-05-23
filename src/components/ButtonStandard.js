@@ -13,7 +13,6 @@ const ButtonStandard = props => {
 export default ButtonStandard
 
 const Standard = styled.button`
-    margin: 15rem 0 0 0;
     height: 4rem;
     width: 15rem;
     background: rgba(8, 76, 97, 1);
