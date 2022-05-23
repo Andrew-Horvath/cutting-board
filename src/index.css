@@ -21,9 +21,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0rem;
-  height: 100vh;
   background: linear-gradient(to bottom, rgba(179, 203, 202, 1), rgba(28, 112, 109, .82 ), rgba(17, 66, 64, .84), rgba(17, 66, 64, 1)) no-repeat;
-  /* background: url(./components/images/bg-blk-textured.jpg) no-repeat center; */
-  background-size: 100% auto;
+  /* background-size: 100% auto; */
 }

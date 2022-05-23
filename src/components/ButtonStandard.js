@@ -13,18 +13,20 @@ const ButtonStandard = props => {
 export default ButtonStandard
 
 const Standard = styled.button`
-    height: 4.8rem;
-    width: 10rem;
-    background: rgba(37, 68, 65, 1);
-    font-size: 1.4rem;
+    margin: 15rem 0 0 0;
+    height: 4rem;
+    width: 15rem;
+    background: rgba(8, 76, 97, 1);
+    font-size: 1.8rem;
     font-weight: 700;
-    color: rgba(126, 217, 87, 1);
+    color: rgba(153, 194, 77, 1);
     text-transform: uppercase;
-    border: 1px solid rgba(37, 68, 65, 1);
-    border-radius: 5px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 
     &:hover {
-        background: blue;
+        color: rgba(8, 76, 97, 1);
+        background: rgba(255, 188, 66, 1);
     }
 `

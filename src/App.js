@@ -15,10 +15,10 @@ export default App;
 
 const styles = {
   container: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: '0 1rem',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // justifyContent: 'space-around',
+    // padding: '0 1rem',
   
   },
 
