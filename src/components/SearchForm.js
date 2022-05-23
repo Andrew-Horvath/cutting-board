@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import SearchButton from './ButtonStandard';
 
-const UserForm = props => {
+const SearchForm = props => {
  
     
     return (
@@ -22,7 +22,7 @@ const UserForm = props => {
     )
 }
 
-export default UserForm;
+export default SearchForm;
 
 const styles = {
   containerForm: {
