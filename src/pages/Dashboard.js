@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ContainerBackground from '../components/images/bg-table-setting.jpg';
 
 function Dashboard () {
     const [pageTitle] = ['Cutting Board'];
@@ -18,20 +19,13 @@ export default Dashboard;
 
 const styles = {
     container: {
-        display: 'flex',
-        flexDirection: 'column',
-        width: '50%',
-        fontFamily: 'Roboto Slab',
-        background: 'rgba(17, 66, 64, 1)',
-    },
-    row: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        gap: '1rem',
-        marginBottom: '3rem',
-        width: '100%',
-        height: '100%',
+        padding: '1rem',
+        background:  `linear-gradient(to bottom, rgba(255,255,255,0), rgba(57,57,57,.65), rgba(143, 45, 86, 1)), url(${ContainerBackground}) `,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '90vh',
+ 
+        
     },
     header: {
         display: 'flex',
@@ -40,10 +34,12 @@ const styles = {
         justifyContent: 'space-between',
     },
     title: {
-        fontSize: '5rem',
+        fontFamily: 'Roboto Slab',
+        fontWeight: '600',
+        fontSize: '4rem',
         textTransform: 'uppercase',
         color: 'rgba(255, 188, 66, 1)',
-        // margin: '0 0 1rem 1rem',
+        margin: '0 0 1rem 0rem',
     },
 
 }
