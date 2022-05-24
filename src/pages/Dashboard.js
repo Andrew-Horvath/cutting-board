@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import ContainerBackground from '../components/images/bg-board-pretzel.jpg';
 import SearchForm from '../components/SearchForm';
-import SearchButton from '../components/ButtonStandard';
 
 function Dashboard () {
     const [pageTitle] = ['Cutting Board'];
@@ -12,7 +11,7 @@ function Dashboard () {
             <header style={styles.header}>
                 <h1 style={styles.title}>{pageTitle}</h1>
             </header>
-                <SearchForm />
+               
         </section>
     );
 }
