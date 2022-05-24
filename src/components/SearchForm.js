@@ -3,16 +3,23 @@ import styled from 'styled-components';
 import SearchButton from './ButtonStandard';
 
 const SearchForm = props => {
- 
+  const [query, setQuery] = useState("");
+
+  
+  function search(e) {
+    e.preventDefault();
+    console.log('You Searched');
+    return false;
+  }
     
     return (
       <div style={styles.containerForm}>
         <h2 style={styles.formTitle}>Search Recipes</h2>
-        <StyledForm>
-          <fieldset class="search-items">
-            <div container-inputs>
-              <label for="search-items">Enter Search Ingredients</label>
-              <input type="text" name="search-items" placeholder="i.e. apples, pork"/>
+        <StyledForm onSubmit={search}>
+          <fieldset className="search-items">
+            <div className="container-inputs">
+              <label htmlFor="search-items">Enter Search Ingredients</label>
+              <input type="text" name="search-items" onChange={ (e) => {setQuery(e.target.value)} } placeholder="i.e. apples, pork"/>
             </div>
           </fieldset>        
           
