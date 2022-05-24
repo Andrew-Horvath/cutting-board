@@ -14,9 +14,10 @@ export default ButtonStandard
 
 const Standard = styled.button`
     height: 4rem;
-    width: 15rem;
+    width: 16rem;
+    padding: 1rem;
     background: rgba(8, 76, 97, 1);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: rgba(153, 194, 77, 1);
     text-transform: uppercase;
@@ -25,7 +26,7 @@ const Standard = styled.button`
     cursor: pointer;
 
     &:hover {
-        color: rgba(8, 76, 97, 1);
-        background: rgba(255, 188, 66, 1);
+        color: #99c24d;
+        background: #d81159;
     }
 `

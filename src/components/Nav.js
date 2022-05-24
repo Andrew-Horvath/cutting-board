@@ -1,24 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Button from './ButtonStandard';
 
-const sideNav = props => {
+const MainNav = props => {
     return (
         <nav style={styles.navContainer}>
-            <LinkStyled to="/settingChart">{<Avatar AvatarIcon={AvatarImageURL} />}</LinkStyled>
-         
+            <LinkStyled to="/ingredient"><Button btnText='ingredient' /></LinkStyled>
+            <LinkStyled to="/cuisine"><Button btnText='cuisine' /></LinkStyled>
+            <LinkStyled to="/random"><Button btnText='Random Recipe' /></LinkStyled>
         </nav>
     )
 }
-export default sideNav;
+export default MainNav;
 
 const styles = {
     navContainer: {
+        boxSizing: 'border-box',
         display: 'flex',
-        flexDirection: 'column',
-        gap: '2rem',
-        padding: '1.5rem',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         background: 'none',
+        width: '40rem',
     }
 }
 
@@ -31,9 +34,5 @@ const LinkStyled = styled(Link)`
     color: rgba(37, 68, 65, 1);
     text-transform: uppercase;
     border: none;
-    cursor: pointer;
-
-    &:hover {
-        color: rgba(247, 100, 107, 1);
-    }
+    cursor: pointer;  
 `
