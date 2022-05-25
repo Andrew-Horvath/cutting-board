@@ -8,9 +8,7 @@ function Dashboard () {
 
     return (
         <section style={styles.container}>
-            <header style={styles.header}>
-                <h1 style={styles.title}>{pageTitle}</h1>
-            </header>
+           
                
         </section>
     );
@@ -22,9 +20,6 @@ const styles = {
     container: {
         display: 'block',
         padding: '1rem',
-        background:  `linear-gradient(to bottom, rgba(255,255,255, 0), rgba(57,57,57,.65), rgba(143, 45, 86, 1)), url(${ContainerBackground}) center center`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
         height: '100vh',
         maxWidth: '50rem',
  

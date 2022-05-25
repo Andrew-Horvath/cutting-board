@@ -16,19 +16,13 @@ export default MainNav;
 
 const styles = {
     navContainer: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
         background: 'none',
-        width: '40rem',
-        margin: '0 0 2rem 0',
     }
 }
 
 const LinkStyled = styled(Link)`
     height: 5rem;
     width: 5rem;
-    background: none;
     font-size: 3.5rem;
     font-weight: 700;
     color: rgba(37, 68, 65, 1);

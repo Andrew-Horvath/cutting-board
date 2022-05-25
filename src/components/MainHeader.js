@@ -1,26 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from './images/cb_Logo.jpg';
+import Logo from './images/logo_cuttingBoard.jpg';
 import Button from './ButtonStandard';
-import { BsSearch } from 'react-icons/bs';
-
+import { Link } from 'react-router-dom';
 
 const MainHeader = () => {
     return (
         <header style={styles.mainHeader}>
             <div style={styles.logoWrapper}>
-                <div style={styles.logo}>
-                    <img src={Logo} alt='some alt text for logo here' />
-                </div>
+                    <img style={styles.imageLogo} src={Logo} alt='some alt text for logo here' />
                 <h1 style={styles.companyTitle}>Cutting Board</h1>
             </div>
-            <div style={styles.searchWrapper}>
-                <span style={styles.searchIcon}><BsSearch /></span>
-                <input type="text" style={styles.searchInput}
-                placeholder="Search" />
-            </div>
             <nav style={styles.rightNav}>
-               <Button bthText='Button' />
+               <Link to='/'><Button style={styles.homeBtn} btnText='Home' /></Link>
             </nav>
         </header>
     )
@@ -30,50 +22,31 @@ export default MainHeader
 const styles = {
     mainHeader: {
         padding: '1.5%',
-        background: 'rgba(37, 68, 65, 1)',
+        background: 'rgba(8, 76, 97, 1)',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        boxShadow: '1px 6px 10px 3px rgba(37, 68, 65, .4)',
+        boxShadow: '1px 6px 10px 3px rgba(8, 76, 97, .4)',
         marginBottom: '2rem',
     },
     logoWrapper: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        marginLeft: '1%',
+        marginLeft: '10%',
     },
-    logo: {
-       height: '50px',
-       width: '50px',
-       marginRight: '1rem',
+    imageLogo: {
+        width: '100px',
+        height: '100px',
     },
     companyTitle: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Roboto Slab',
         fontSize: '3rem',
         fontWeight: '600',
         textTransform: 'uppercase',
-        color: 'rgba(126, 217, 87, 1)',
-    },
-    searchWrapper: {
-        border: '2px solid rgba(247, 100, 107, 1)',
-        display: 'flex',
-        flexDirection: 'row',
-        width: '30%',
-    },
-    searchIcon: {
-        background: 'rgba(255, 235, 245, 1)',
-        padding: '1rem',
-        fontSize: '1.5rem',
-        display: 'flex',
-        alignItems: 'center',
-    },
-    searchInput: {
-        border: 'none',
-        flex: '1',
-        padding: '1rem',
-        background: 'rgba(255, 235, 245, 1)',
+        color: 'rgba(241, 143, 1, 1)',
+        marginLeft: '5rem',
     },
     rightNav: {
         display: 'flex',
