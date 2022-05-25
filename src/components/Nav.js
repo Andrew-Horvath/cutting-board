@@ -16,12 +16,12 @@ export default MainNav;
 
 const styles = {
     navContainer: {
-        boxSizing: 'border-box',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         background: 'none',
         width: '40rem',
+        margin: '0 0 2rem 0',
     }
 }
 

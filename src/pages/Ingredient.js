@@ -1,19 +1,19 @@
 import React from 'react';
+import SearchForm from '../components/SearchForm';
 
-function Cuisine() {
+function Ingredient() {
     return (
         <div style={styles.container}>
-            <h1>Search by Ingredient</h1>
-            <p>This is where you would search by Ingredients you have, but its not here yet</p>
+            <SearchForm />
         </div>
     );
 }
 
-export default Cuisine;
+export default Ingredient;
 
 const styles = {
     container: {
-        background: 'black',
-        color: 'orange',
+    background: 'rgba(41, 41, 41, .7)',
+    padding: '2rem',
     }
 }

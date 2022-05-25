@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import SearchButton from './ButtonStandard';
+import { Link } from 'react-router-dom';
 
 const SearchForm = props => {
   const [query, setQuery] = useState("");
@@ -23,7 +24,7 @@ const SearchForm = props => {
             </div>
           </fieldset>        
           
-          <SearchButton btnText='Search' />
+          <Link to={'/searchResults/' + query} value={query}><SearchButton btnText='Search' /></Link>
         </StyledForm>
         </div>
     )
