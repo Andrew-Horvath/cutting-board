@@ -3,9 +3,7 @@ import ContainerBackground from '../components/images/bg-board-pretzel.jpg';
 import SearchForm from '../components/SearchForm';
 
 function Dashboard () {
-    const [pageTitle] = ['Cutting Board'];
-
-
+    
     return (
         <section style={styles.container}>
            

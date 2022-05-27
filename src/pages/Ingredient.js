@@ -15,5 +15,8 @@ const styles = {
     container: {
     background: 'rgba(41, 41, 41, .7)',
     padding: '2rem',
+    width: '75%',
+    height: '100vh',
+    borderRadius: '1rem',
     }
 }
