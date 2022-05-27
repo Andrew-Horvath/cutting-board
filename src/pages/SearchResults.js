@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
 
 function SearchResults() {
@@ -35,15 +36,15 @@ function SearchResults() {
       });
     }, [query]);
     
-    if (loading) return <p style={styles.loadingStyle}>'Loading...'</p>;
+    if (loading) return <p style={styles.loadingStyle}>Your Recipes are on the way!...</p>;
     if (err) return "Error!";
       
   return (
-    <div>
+    <RecipesStyled>
         {userSearch.map (data => (
-          <div key={data.id}>
+          <div key={data.id} className="recipe-card">
               <h3 style={styles.h3}>{data.title}</h3>
-                <p><img src={data.image} alt='recipe finished product' /></p>
+                <p><img className='recipe-img' src={data.image} alt='recipe finished product' /></p>
           </div>
         ))}
 
@@ -52,7 +53,7 @@ function SearchResults() {
           return 
         }) : null
       } */}
-    </div>
+    </RecipesStyled>
   )
 }
 export default SearchResults;
@@ -60,17 +61,48 @@ export default SearchResults;
 const styles = {
     loadingStyle: {
         fontSize: '3rem',
-        color: 'rgba(126, 217, 87, 1)',
+        textTransform: 'uppercase',
+        color: 'rgba(143, 45, 86, 1)',
+        marginTop: '2rem',
+
     },
     container: {
         display: 'flex',
         flexDirection: 'column',
     },
     h3: {
+        width: '45%',
         fontSize: '2rem',
         fontFamily: 'Roboto Slab',
         textTransform: 'uppercase',
         color: 'white',
+
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
     },
 
 }
+
+const RecipesStyled = styled.div `
+        height: 100vh;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem 2rem;
+        flex-wrap: wrap;
+        width: 75%;
+        background: red;
+
+  .recipe-card {
+    width: calc(100% / 2 - 2rem);
+    flex: 1 1 0;
+    background: blue;
+    padding: 1rem;
+  }
+
+  .recipe-img {
+    width: 25rem;
+  }
+`
