@@ -21,6 +21,7 @@ export default MainHeader
 
 const styles = {
     mainHeader: {
+        boxSizing: 'border-box',
         padding: '1.5%',
         background: 'rgba(8, 76, 97, 1)',
         display: 'flex',
@@ -42,16 +43,16 @@ const styles = {
     },
     companyTitle: {
         fontFamily: 'Roboto Slab',
-        fontSize: '3rem',
+        fontSize: '1.8rem',
         fontWeight: '600',
         textTransform: 'uppercase',
         color: 'rgba(241, 143, 1, 1)',
-        marginLeft: '5rem',
+        marginLeft: '1rem',
     },
     rightNav: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginRight: '2%',
+        // display: 'flex',
+        // flexDirection: 'row',
+        // alignItems: 'center',
+        // marginRight: '2%',
     },
 }

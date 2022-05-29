@@ -42,10 +42,12 @@ function SearchResults() {
   return (
     <RecipesStyled>
         {userSearch.map (data => (
-          <div key={data.id} className="recipe-card">
-              <h3 style={styles.h3}>{data.title}</h3>
+          
+            <div key={data.id} className="recipe-card">
+              <h3 className='recipe-title'>{data.title}</h3>
                 <p><img className='recipe-img' src={data.image} alt='recipe finished product' /></p>
-          </div>
+            </div>
+          
         ))}
 
         {/* {!loading && userData.length > 0 ? userData.map(user => {
@@ -66,43 +68,33 @@ const styles = {
         marginTop: '2rem',
 
     },
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    h3: {
-        width: '45%',
-        fontSize: '2rem',
-        fontFamily: 'Roboto Slab',
-        textTransform: 'uppercase',
-        color: 'white',
-
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-    },
-
 }
 
 const RecipesStyled = styled.div `
-        height: 100vh;
-        margin: 0 auto;
-        padding: 2rem;
-        display: flex;
-        justify-content: space-evenly;
-        gap: 2rem 2rem;
-        flex-wrap: wrap;
-        width: 75%;
-        background: red;
-
+        box-sizing: border-box;
+        height: 100%;
+        background: green;
+        display: grid;
+    
   .recipe-card {
-    width: calc(100% / 2 - 2rem);
-    flex: 1 1 0;
+    padding: 1.5rem;
     background: blue;
-    padding: 1rem;
+    
+  }
+
+  .recipe-title {
+    font-family: 'Roboto Slab', 'Roboto';
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    width: 45%;
+     
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .recipe-img {
-    width: 25rem;
+    
   }
 `
