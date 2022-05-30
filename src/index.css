@@ -27,3 +27,9 @@ body {
   background: linear-gradient(to bottom, rgba(8, 76, 97, .35) 25vh, rgba(8, 76, 97, .5) 50vh, rgba(8, 76, 97, .8) 75vh, rgba(8, 76, 97, 1) 100vh) no-repeat;
   height: 100%;
 }
+
+    @media (min-width: 700px) {
+      .dashboard-text {
+        text-align: center;
+      }   
+    }

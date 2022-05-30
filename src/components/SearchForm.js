@@ -15,7 +15,7 @@ const SearchForm = props => {
     
     return (
       <div style={styles.containerForm}>
-        <h2 style={styles.formTitle}>Search Recipes</h2>
+        <h2 style={styles.formTitle}>Search Recipes by ingredient</h2>
         <StyledForm onSubmit={search}>
           <fieldset className="search-items">
             <div className="container-inputs">
@@ -37,7 +37,7 @@ const styles = {
     padding: '2rem',
   },
   formTitle: {
-    fontSize: '2rem',
+    fontSize: '5rem',
     fontFamily: 'Roboto Slab, Roboto, sans-serif',
     fontWeight: '500',
     textTransform: 'uppercase',

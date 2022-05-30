@@ -18,5 +18,6 @@ const styles = {
     width: '75%',
     height: '100vh',
     borderRadius: '1rem',
+    margin: '2rem auto 0',
     }
 }

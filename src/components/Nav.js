@@ -6,8 +6,8 @@ import Button from './ButtonStandard';
 const MainNav = props => {
     return (
         <nav style={styles.navContainer}>
-            <LinkStyled to="/ingredient"><Button btnText='ingredient' /></LinkStyled>
-            <LinkStyled to="/cuisine"><Button btnText='cuisine' /></LinkStyled>
+            <LinkStyled to="/ingredient"><Button btnText='by ingredient' /></LinkStyled>
+            <LinkStyled to="/cuisine"><Button btnText='by cuisine' /></LinkStyled>
             <LinkStyled to="/random"><Button btnText='Random Recipe' /></LinkStyled>
         </nav>
     )
@@ -16,17 +16,12 @@ export default MainNav;
 
 const styles = {
     navContainer: {
-        background: 'none',
+        display: 'flex',
+        justifyContent: 'center',
+
     }
 }
 
 const LinkStyled = styled(Link)`
-    height: 5rem;
-    width: 5rem;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: rgba(37, 68, 65, 1);
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;  
+    
 `

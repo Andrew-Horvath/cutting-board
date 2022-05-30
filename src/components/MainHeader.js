@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from './images/logo_cuttingBoard.jpg';
-import Button from './ButtonStandard';
+import ButtonHome from './ButtonHome';
+import { IoHome } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 const MainHeader = () => {
@@ -12,7 +13,7 @@ const MainHeader = () => {
                 <h1 style={styles.companyTitle}>Cutting Board</h1>
             </div>
             <nav style={styles.rightNav}>
-               <Link to='/'><Button style={styles.homeBtn} btnText='Home' /></Link>
+               <Link to='/'><ButtonHome btnText={<IoHome />} /></Link>
             </nav>
         </header>
     )
@@ -43,16 +44,15 @@ const styles = {
     },
     companyTitle: {
         fontFamily: 'Roboto Slab',
-        fontSize: '1.8rem',
+        fontSize: '2.5rem',
         fontWeight: '600',
+        lineHeight: '1.1',
         textTransform: 'uppercase',
         color: 'rgba(241, 143, 1, 1)',
-        marginLeft: '1rem',
+        marginLeft: '1.5rem',
     },
     rightNav: {
-        // display: 'flex',
-        // flexDirection: 'row',
-        // alignItems: 'center',
-        // marginRight: '2%',
+        marginRight: '2%',
     },
+
 }

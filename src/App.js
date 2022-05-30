@@ -36,7 +36,7 @@ export default App;
 
 const styles = {
   containerMain: {
-
+    width: '100%',
   },
 
   container: {
