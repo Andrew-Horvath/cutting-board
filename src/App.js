@@ -10,12 +10,13 @@ import Header from './components/MainHeader';
 function App() {
 
   return (
+    // main setup for app. sets routes for navigation and adds the header component.
     <div>
       <main style={styles.containerMain}>
         
           <Header />
               <MainNav />
-        <section style={styles.container}>
+        <section style={styles.container} className='app-section-container'>
                 <Routes>
                   <Route path='/' element={<Dashboard />} />
                   <Route path='ingredient' element={<Ingredient />} />

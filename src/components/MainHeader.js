@@ -5,12 +5,13 @@ import ButtonHome from './ButtonHome';
 import { IoHome } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
+
 const MainHeader = () => {
     return (
         <header style={styles.mainHeader}>
             <div style={styles.logoWrapper}>
                     <img style={styles.imageLogo} src={Logo} alt='some alt text for logo here' />
-                <h1 style={styles.companyTitle}>Cutting Board</h1>
+                <StyledH1 className='company-title'>Cutting Board</StyledH1>
             </div>
             <nav style={styles.rightNav}>
                <Link to='/'><ButtonHome btnText={<IoHome />} /></Link>
@@ -42,17 +43,25 @@ const styles = {
         width: '100px',
         height: '100px',
     },
-    companyTitle: {
-        fontFamily: 'Roboto Slab',
-        fontSize: '2.5rem',
-        fontWeight: '600',
-        lineHeight: '1.1',
-        textTransform: 'uppercase',
-        color: 'rgba(241, 143, 1, 1)',
-        marginLeft: '1.5rem',
-    },
     rightNav: {
         marginRight: '2%',
     },
 
 }
+
+const StyledH1 = styled.h1 `
+        font-family: Roboto Slab;
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: rgba(241, 143, 1, 1);
+        margin: 0 0 0 3rem;
+
+        @media (min-width: 600px) {
+            font-size: 3.5rem;
+            margin: 0 0 0 4rem;
+        }
+
+
+`

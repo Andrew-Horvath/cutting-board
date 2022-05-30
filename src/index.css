@@ -24,12 +24,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* giving the main content container a gradient background */
   background: linear-gradient(to bottom, rgba(8, 76, 97, .35) 25vh, rgba(8, 76, 97, .5) 50vh, rgba(8, 76, 97, .8) 75vh, rgba(8, 76, 97, 1) 100vh) no-repeat;
   height: 100%;
 }
 
+    /* setting sizing for one piece of the content on the main dashboard. adding more and fixing to come. */
     @media (min-width: 700px) {
       .dashboard-text {
         text-align: center;
-      }   
+      }
+     
     }

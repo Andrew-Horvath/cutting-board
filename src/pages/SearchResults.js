@@ -73,21 +73,23 @@ const styles = {
 const RecipesStyled = styled.div `
         box-sizing: border-box;
         height: 100%;
-        background: green;
-        display: grid;
+        padding: 2rem;
     
   .recipe-card {
     padding: 1.5rem;
-    background: blue;
+    background: rgba(241, 143, 1, .8);
+    margin: 0 0 2rem 0;
     
   }
 
   .recipe-title {
     font-family: 'Roboto Slab', 'Roboto';
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
     text-transform: uppercase;
-    color: white;
-    width: 45%;
+    color: rgba(8, 76, 97, 1);
+    width: 50%;
+    margin: 0 0 1rem 0;
      
     white-space: nowrap;
     overflow: hidden;
@@ -95,6 +97,6 @@ const RecipesStyled = styled.div `
   }
 
   .recipe-img {
-    
+    width: min(75%, 20rem);
   }
 `

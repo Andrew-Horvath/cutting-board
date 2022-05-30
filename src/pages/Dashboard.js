@@ -5,7 +5,7 @@ import SearchForm from '../components/SearchForm';
 function Dashboard () {
     
     return (
-        <section style={styles.container}>
+        <section style={styles.container} className="dashboard-section-container">
            <h1 style={styles.h1}>Welcome to Cutting Board</h1>
            <h3 style={styles.h3}>The place to begin Cooking!</h3>
            <p style={styles.p} className='dashboard-text'>Select an option from above to begin your cooking adventure!</p>

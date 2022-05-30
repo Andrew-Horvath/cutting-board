@@ -1,23 +1,23 @@
 import React from 'react';
 import SearchForm from '../components/SearchForm';
+import styled from 'styled-components';
 
 function Ingredient() {
     return (
-        <div style={styles.container}>
+        // container for search form layout and styling
+        <StyledDivIngredient className='ingredient-div-container'>
+            {/* calling search form component */}
             <SearchForm />
-        </div>
+        </StyledDivIngredient>
     );
 }
 
 export default Ingredient;
 
-const styles = {
-    container: {
-    background: 'rgba(41, 41, 41, .7)',
-    padding: '2rem',
-    width: '75%',
-    height: '100vh',
-    borderRadius: '1rem',
-    margin: '2rem auto 0',
-    }
-}
+const StyledDivIngredient = styled.div `
+    padding: 1rem;
+    height: 100vh;
+    border-radius: .5rem;
+    margin: 2rem auto 0;
+
+`
