@@ -40,12 +40,14 @@ function SearchResults() {
     if (err) return "Error!";
       
   return (
-    <RecipesStyled>
+    <RecipesStyled id='search-results-div'>
+      
         {userSearch.map (data => (
-          
             <div key={data.id} className="recipe-card">
-              <h3 className='recipe-title'>{data.title}</h3>
-                <p><img className='recipe-img' src={data.image} alt='recipe finished product' /></p>
+              <div className="recipe-card-content">
+                <h3 className='recipe-title'>{data.title}</h3>
+                  <img className='recipe-img' src={data.image} alt='recipe finished product' />
+              </div>
             </div>
           
         ))}
@@ -71,14 +73,28 @@ const styles = {
 }
 
 const RecipesStyled = styled.div `
-        box-sizing: border-box;
-        height: 100%;
-        padding: 2rem;
+    box-sizing: border-box;
+    padding: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
     
+
+
   .recipe-card {
+    box-sizing: border-box;
     padding: 1.5rem;
     background: rgba(241, 143, 1, .8);
-    margin: 0 0 2rem 0;
+    margin: 0 auto 2rem;
+    width: min(100%, 40rem); 
+  }
+
+  .recipe-card-content {
+    background: green;
+    margin: 0 auto;
+    width: min(100%, 50rem);
+    text-align: center;
     
   }
 
@@ -88,8 +104,8 @@ const RecipesStyled = styled.div `
     font-weight: 700;
     text-transform: uppercase;
     color: rgba(8, 76, 97, 1);
-    width: 50%;
-    margin: 0 0 1rem 0;
+    margin: 0 auto 1rem;
+    width: 25rem;
      
     white-space: nowrap;
     overflow: hidden;
@@ -97,6 +113,7 @@ const RecipesStyled = styled.div `
   }
 
   .recipe-img {
-    width: min(75%, 20rem);
+    box-sizing: border-box;
+    width: min(100%, 35rem);
   }
 `

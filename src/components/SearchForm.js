@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import SearchButton from './ButtonStandard';
+import SearchButton from './ButtonSearch';
 import { Link } from 'react-router-dom';
 
 const SearchForm = props => {
@@ -42,17 +42,9 @@ const styles = {
     textAlign: 'center',
     color: 'rgba(143, 45, 86, 1)',
     lineHeight: '1',
-    margin: '0rem 0 4rem 0'
+    margin: '0rem 0 2rem 0'
   },
-  formInstruct: {
-    color: 'rgba(241, 143, 1, 1)',
-    fontSize: '1.8rem',
-    fontFamily: 'Roboto, Roboto Slab, sans-serif',
-    fontWeight: '500',
-    textAlign: 'center',
-    margin: '0 auto',
-    width: '85%',
-  }
+ 
 }
 
 const StyledForm = styled.form`    
@@ -63,6 +55,9 @@ const StyledForm = styled.form`
         margin: .5rem auto;
         background: rgba(6, 59, 75, 1);
         
+        @media (min-width: 400px) {
+           padding: 3rem;
+        }
         @media (min-width: 600px) {
           max-width: 60rem;
         }
@@ -72,7 +67,11 @@ const StyledForm = styled.form`
             font-size: 1.8rem;
             font-family: Roboto, Roboto Slab, sans-serif;
             font-weight: 500;
-            margin: 0 auto 2rem;
+            margin: 0 0 2rem 0;
+
+              @media (min-width: 600px) {
+                font-size: 1.6rem;
+          }
         }
 
         fieldset {
