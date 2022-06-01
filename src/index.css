@@ -30,6 +30,7 @@ body {
 }
 
     /* setting sizing for one piece of the content on the main dashboard. adding more and fixing to come. */
+
     @media (min-width: 700px) {
       .dashboard-text {
         text-align: center;

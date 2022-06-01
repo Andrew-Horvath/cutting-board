@@ -40,15 +40,13 @@ function SearchResults() {
     if (err) return "Error!";
       
   return (
-    <RecipesStyled id='search-results-div'>
+    <RecipesStyled id='search-results-section'>
       
         {userSearch.map (data => (
-            <div key={data.id} className="recipe-card">
-              <div className="recipe-card-content">
+            <article key={data.id} className="recipe-card">
                 <h3 className='recipe-title'>{data.title}</h3>
                   <img className='recipe-img' src={data.image} alt='recipe finished product' />
-              </div>
-            </div>
+            </article>
           
         ))}
 
@@ -72,30 +70,48 @@ const styles = {
     },
 }
 
-const RecipesStyled = styled.div `
+const RecipesStyled = styled.section `
     box-sizing: border-box;
-    padding: 1rem; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 2rem;
-    
-
+    background: rgba(6, 59, 75, 1);
+    width: 100%;
+    margin: 2rem 0;
+    padding: 1.5rem;
+        @media (min-width:400px) {
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        gap: 3rem 3rem;
+      }
+      @media (min-width:650px) {
+        margin: 3rem 0;
+        padding: 3rem 2rem 2rem;
+      }
 
   .recipe-card {
-    box-sizing: border-box;
+    background: rgba(218, 243, 251, 1);
+    margin: 0 auto 2.5rem;
     padding: 1.5rem;
-    background: rgba(241, 143, 1, .8);
-    margin: 0 auto 2rem;
-    width: min(100%, 40rem); 
-  }
+    box-shadow: 7px 7px 7px 5px rgba(218, 243, 251, .3);
+    position: relative;
 
-  .recipe-card-content {
-    background: green;
-    margin: 0 auto;
-    width: min(100%, 50rem);
-    text-align: center;
-    
+    @media (min-width: 400px) {
+          min-width: 368px;
+          max-width: 400px;
+          flex: 1 1 0;
+          text-align: center;
+          margin: 0 auto;
+    }
+    @media (min-width: 650px) {
+      min-width: 300px;
+      max-width: 600px;
+      padding: 2rem;
+    }
+    // @media (min-width: 950px) {
+    //   max-width: 500px;
+
+    // }
   }
 
   .recipe-title {
@@ -104,16 +120,20 @@ const RecipesStyled = styled.div `
     font-weight: 700;
     text-transform: uppercase;
     color: rgba(8, 76, 97, 1);
-    margin: 0 auto 1rem;
-    width: 25rem;
-     
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media (min-width: 400px) {
+      margin: 0 auto;
+      max-width: 340px;
+    }
   }
 
   .recipe-img {
     box-sizing: border-box;
     width: min(100%, 35rem);
+    margin: 0 auto;
   }
 `
