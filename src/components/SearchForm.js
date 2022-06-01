@@ -16,14 +16,14 @@ const SearchForm = props => {
     return (
       <div className="search-div-container">
         <h2 style={styles.formTitle}>Search Recipes by ingredient</h2>
-          <p style={styles.formInstruct}>Please separate ingredients by comma if adding more than one ingredient.</p>
-        <StyledForm onSubmit={search}>
-          <fieldset className="search-items">
-            <div className="container-inputs">
-              <label htmlFor="search-items">Enter Search Ingredients Here</label>
-              <input type="text" name="search-items" onChange={ (e) => {setQuery(e.target.value)} } placeholder="i.e. apples, pork"/>
-            </div>
-          </fieldset>        
+          <StyledForm onSubmit={search}>
+            <p className="search-instruct">Please separate ingredients by comma if adding more than one ingredient.</p>
+              <fieldset className="search-items">
+                <div className="container-inputs">
+                  <label htmlFor="search-items">Enter Search Ingredients Here</label>
+                    <input type="text" name="search-items" onChange={ (e) => {setQuery(e.target.value)} } placeholder="i.e. apples, pork"/>
+                </div>
+              </fieldset>        
           
           <Link to={'/searchResults/' + query} value={query}><SearchButton btnText='Search' /></Link>
         </StyledForm>
@@ -42,11 +42,11 @@ const styles = {
     textAlign: 'center',
     color: 'rgba(143, 45, 86, 1)',
     lineHeight: '1',
-    margin: '0 0 2rem 0'
+    margin: '0rem 0 4rem 0'
   },
   formInstruct: {
-    color: 'rgba(8, 76, 97, 1)',
-    fontSize: '2rem',
+    color: 'rgba(241, 143, 1, 1)',
+    fontSize: '1.8rem',
     fontFamily: 'Roboto, Roboto Slab, sans-serif',
     fontWeight: '500',
     textAlign: 'center',
@@ -58,17 +58,22 @@ const styles = {
 const StyledForm = styled.form`    
         padding: 2rem;
         font-size: 2rem;
-        border-radius: 1rem;
+        border-radius: .5rem;
         width: 100%;
-        margin: 2rem auto;
-        background: rgba(41, 41, 41, .7);
+        margin: .5rem auto;
+        background: rgba(6, 59, 75, 1);
         
         @media (min-width: 600px) {
           max-width: 60rem;
-
         }
 
-
+        .search-instruct {
+            color: rgba(153, 194, 77, 1);
+            font-size: 1.8rem;
+            font-family: Roboto, Roboto Slab, sans-serif;
+            font-weight: 500;
+            margin: 0 auto 2rem;
+        }
 
         fieldset {
             outline: none;
@@ -84,15 +89,19 @@ const StyledForm = styled.form`
         input {
             width: 100%;
             padding: 1rem;
-            background: #f5e0e9;
+            color: rgba(8, 76, 97, 1);
+            background: rgba(218, 243, 251, 1);
             border-radius: 1rem;
-            margin: 0 0 1rem 0;
+            border: none;
+            margin: 0 0 2rem 0;
             
               &:placeholder {
                 text-transform: uppercase;
               }
               &:focus {
-                outline: 1px solid blue;
+                box-shadow: 0 0 .3rem .3rem rgba(153, 194, 77, 1);
+                border: none;
+                outline: 1px solid rgba(241, 143, 1, 1);
               }
         }
 

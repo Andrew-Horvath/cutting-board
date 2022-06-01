@@ -31,7 +31,7 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         boxShadow: '1px 6px 10px 3px rgba(8, 76, 97, .4)',
-        marginBottom: '2rem',
+        marginBottom: '3rem',
     },
     logoWrapper: {
         display: 'flex',
