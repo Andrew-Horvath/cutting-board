@@ -8,11 +8,14 @@ import { Link } from 'react-router-dom';
 
 const MainHeader = () => {
     return (
+        //main tag to hold rest of code for deployment and to denote it is the header of the app
         <header style={styles.mainHeader}>
+            {/* wrapper to contain logo and company name together. */}
             <div style={styles.logoWrapper}>
                     <img style={styles.imageLogo} src={Logo} alt='some alt text for logo here' />
                 <StyledH1 className='company-title'>Cutting Board</StyledH1>
             </div>
+            {/* separate nav tag and link for the return to main page or home button for. */}
             <nav style={styles.rightNav}>
                <Link to='/'><ButtonHome btnText={<IoHome />} /></Link>
             </nav>
@@ -22,6 +25,7 @@ const MainHeader = () => {
 export default MainHeader
 
 const styles = {
+    //styles and formatting of header content, mostly layout of all elements.
     mainHeader: {
         boxSizing: 'border-box',
         padding: '1.5%',
@@ -49,6 +53,7 @@ const styles = {
 
 }
 
+//needed better control of styling as some styles dont translate well inline. and its much easier to write regular CSS.
 const StyledH1 = styled.h1 `
         font-family: Roboto Slab;
         font-size: 2.5rem;
