@@ -1,6 +1,10 @@
 import React from 'react';
 
 function Random() {
+      const apiPath = 'https://api.spoonacular.com/recipes/findByIngredients?apiKey=';
+  const apiKey = '4fdab9234b0245be8581462069bd738f';
+
+
      useEffect(() => {
    
       fetch(`${apiPath}${apiKey}&ingredients=${query}&number=5`)
