@@ -40,22 +40,21 @@ function SearchResults() {
     if (err) return "Error!";
       
   return (
-    <RecipesStyled id='search-results-section'>
-      
-        {userSearch.map (data => (
+    <div>
+      <StyledH2>Ingredient Search Results</StyledH2>
+        {/* letting the user know what they searched for */}
+        <StyledP>Your search results for {query}</StyledP>
+        <RecipesStyled id='search-results-section'>
+          {/* mapping out the array results to display  */}
+          {userSearch.map (data => (
             <article key={data.id} className="recipe-card">
                 <h3 className='recipe-title'>{data.title}</h3>
                   <img className='recipe-img' src={data.image} alt='recipe finished product' />
             </article>
           
-        ))}
-
-        {/* {!loading && userData.length > 0 ? userData.map(user => {
-          const {} = user;
-          return 
-        }) : null
-      } */}
-    </RecipesStyled>
+            ))}
+        </RecipesStyled>
+    </div>
   )
 }
 export default SearchResults;
@@ -69,6 +68,32 @@ const styles = {
 
     },
 }
+
+const StyledH2 = styled.h2`
+        font-size: 3.5rem;
+        font-family: Roboto Slab, Roboto, sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        background: rgba(8, 76, 97, 1);
+        border-radius: 1rem;
+        color: orange;
+        width: fit-content;
+        line-height: 1;
+        margin: 2rem auto 0rem;
+        padding: 2rem;
+`
+
+const StyledP = styled.p`
+        font-size: 1.5rem;
+        font-family: Roboto Slab, Roboto, sans-serif;
+        font-weight: 500;
+        border-radius: 1rem;
+        color: rgba(143, 45, 86, 1);
+        width: fit-content;
+        line-height: 1;
+        margin: 0rem auto 2rem;
+        padding: 2rem;
+`
 
 const RecipesStyled = styled.section `
     box-sizing: border-box;
@@ -96,6 +121,7 @@ const RecipesStyled = styled.section `
     box-shadow: 7px 7px 7px 5px rgba(218, 243, 251, .3);
     position: relative;
 
+      //breakpoints to size content properly for the different screen sizes
     @media (min-width: 400px) {
           min-width: 368px;
           max-width: 400px;
@@ -108,10 +134,6 @@ const RecipesStyled = styled.section `
       max-width: 600px;
       padding: 2rem;
     }
-    // @media (min-width: 950px) {
-    //   max-width: 500px;
-
-    // }
   }
 
   .recipe-title {
@@ -125,6 +147,7 @@ const RecipesStyled = styled.section `
     overflow: hidden;
     text-overflow: ellipsis;
 
+    //setting a max width on the title to keep it from extending past the image size and causing display issues
     @media (min-width: 400px) {
       margin: 0 auto;
       max-width: 340px;

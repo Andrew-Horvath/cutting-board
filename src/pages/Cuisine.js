@@ -5,7 +5,7 @@ function Cuisine() {
     return (
         // container for search form layout and styling
         <StyledDivCuisine className='ingredient-div-container'>
-            <StyledH2>Here is your Random Recipe!!</StyledH2>
+            <StyledH2>Search by Cuisine</StyledH2>
         </StyledDivCuisine>
     );
 }
@@ -20,7 +20,7 @@ const StyledH2 = styled.h2`
         text-align: center;
         color: rgba(241, 143, 1, 1);
         line-height: 1;
-        margin: 0rem 0 2rem 0;
+        margin: 2rem 0 2rem 0;
 `
 
 const StyledDivCuisine = styled.div `
