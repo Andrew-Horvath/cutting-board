@@ -9,9 +9,9 @@ const UserForm = props => {
       <div style={styles.containerForm}>
         <h2 style={styles.formTitle}>Search Recipes</h2>
         <StyledForm>
-          <fieldset class="search-items">
-            <div container-inputs>
-              <label for="search-items">Enter Search Ingredients</label>
+          <fieldset className="search-items">
+            <div className='container-inputs'>
+              <label htmlFor="search-items">Enter Search Ingredients</label>
               <input type="text" name="search-items" placeholder="i.e. apples, pork"/>
             </div>
           </fieldset>        
