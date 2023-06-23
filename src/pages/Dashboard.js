@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
-import ContainerBackground from '../components/images/bg-board-pretzel.jpg';
-import SearchForm from '../components/SearchForm';
+import React from 'react';
 
 function Dashboard () {
     
     return (
+        //Web app entry page greeting, name and tagline. Also direction on next step
         <section style={styles.container} className="dashboard-section-container">
            <h1 style={styles.h1}>Welcome to Cutting Board</h1>
            <h3 style={styles.h3}>The place to begin Cooking!</h3>
            <p style={styles.p} className='dashboard-text'>Select an option from above to begin your cooking adventure!</p>
-               
         </section>
     );
 }
@@ -17,12 +15,13 @@ function Dashboard () {
 export default Dashboard;
 
 const styles = {
+    // setting up the styling and formatting of main display page. Also styling the page content.
     container: {
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: '1rem',
-        height: '75vh',
+        padding: '1rem 1rem 5rem 1rem',
+        height: '100%',
         maxWidth: '70rem',
         background: 'rgba(8, 76, 97, 1)',
         margin: '2rem auto 0',
