@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/horvath-andrew-web-app/static/css/main.d9f48dc4.css",
+    "main.js": "/horvath-andrew-web-app/static/js/main.e185b0b1.js",
+    "static/js/787.ffec2e23.chunk.js": "/horvath-andrew-web-app/static/js/787.ffec2e23.chunk.js",
+    "index.html": "/horvath-andrew-web-app/index.html",
+    "main.d9f48dc4.css.map": "/horvath-andrew-web-app/static/css/main.d9f48dc4.css.map",
+    "main.e185b0b1.js.map": "/horvath-andrew-web-app/static/js/main.e185b0b1.js.map",
+    "787.ffec2e23.chunk.js.map": "/horvath-andrew-web-app/static/js/787.ffec2e23.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9f48dc4.css",
+    "static/js/main.e185b0b1.js"
+  ]
+}
